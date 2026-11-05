@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Прайд — ресторан в Наро-Фоминске: стейки, паста, роллы</title>
+<meta name="description" content="Ресторан «Прайд» в Наро-Фоминске: стейки на гриле, блюда от шефа, паста, роллы и wok. Профсоюзная ул., 1. Бронирование столов по телефону.">
+<meta name="theme-color" content="#2b1015">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Прайд — ресторан в Наро-Фоминске">
+<meta property="og:description" content="Стейки на гриле, блюда от шефа, паста, роллы и wok. Профсоюзная ул., 1.">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232b1015'/%3E%3Ctext x='50' y='70' font-size='64' text-anchor='middle' fill='%23c8a35f' font-family='serif'%3EП%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Прайд","servesCuisine":["Европейская","Русская","Японская"],"address":{"@type":"PostalAddress","streetAddress":"Профсоюзная ул., 1","addressLocality":"Наро-Фоминск","addressCountry":"RU"},"geo":{"@type":"GeoCoordinates","latitude":55.379174,"longitude":36.735005},"hasMenu":"#menu"}
+</script>
+<style>
+:root{
+  --wine:#2b1015;--wine-2:#3a171e;--brass:#c8a35f;--brass-d:#8a6a2e;
+  --ivory:#f4eee3;--ink:#241418;--mute:#7b6a64;--line:rgba(200,163,95,.35);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--ink);background:var(--ivory);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;margin:0}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);letter-spacing:-.01em}
+p{margin:0}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(43,16,21,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:var(--serif);font-size:1.7rem;font-weight:700;color:var(--brass);text-decoration:none;letter-spacing:.02em}
+nav{display:flex;gap:28px}
+nav a{color:var(--ivory);text-decoration:none;font-size:.95rem;opacity:.85}
+nav a:hover{opacity:1;color:var(--brass)}
+.btn{display:inline-block;padding:13px 26px;border:1px solid var(--brass);background:var(--brass);color:var(--wine);font-weight:600;font-size:.95rem;text-decoration:none;border-radius:2px;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--brass)}
+.btn.ghost{background:transparent;color:var(--ivory);border-color:rgba(244,238,227,.45)}
+.btn.ghost:hover{border-color:var(--brass);color:var(--brass)}
+.bar .btn{padding:9px 18px}
+
+/* hero */
+.hero{background:var(--wine);color:var(--ivory);padding:clamp(56px,9vw,120px) 0}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,88px);align-items:center}
+.hero h1{font-size:clamp(3.4rem,9vw,7.4rem);color:var(--brass);letter-spacing:-.02em;animation:rise .9s ease both}
+.hero .lead{font-family:var(--serif);font-size:clamp(1.35rem,2.4vw,1.85rem);line-height:1.3;margin:20px 0 14px;max-width:24em}
+.hero .sub{color:rgba(244,238,227,.72);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.ledger{border:1px solid var(--line);padding:30px 28px;background:linear-gradient(180deg,var(--wine-2),var(--wine))}
+.ledger h3{font-size:1.5rem;color:var(--brass);margin-bottom:6px}
+.ledger small{display:block;color:rgba(244,238,227,.6);margin-bottom:18px;font-size:.85rem}
+.row{display:flex;align-items:baseline;gap:10px;padding:9px 0}
+.row .n{font-weight:500}
+.row .d{flex:1;border-bottom:1px dotted rgba(200,163,95,.55);transform:translateY(-4px);min-width:16px}
+.row .p{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--brass);white-space:nowrap}
+.row .w{display:block;font-size:.78rem;color:rgba(244,238,227,.55);font-weight:400}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* facts */
+.facts{border-bottom:1px solid #e3d8c6}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:30px 24px;border-left:1px solid #e3d8c6}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font-family:var(--serif);font-size:2.3rem;font-weight:700;line-height:1;color:var(--wine)}
+.fact span{display:block;margin-top:8px;font-size:.9rem;color:var(--mute)}
+
+/* sections */
+section{padding:clamp(64px,9vw,112px) 0}
+.head{max-width:620px;margin-bottom:48px}
+.head p{margin-top:14px;color:var(--mute)}
+.kitchen .cols{display:grid;grid-template-columns:repeat(3,1fr)}
+.col{padding:0 32px;border-left:1px solid #d9ccb6}
+.col:first-child{border-left:0;padding-left:0}
+.col h3{font-size:1.9rem;margin-bottom:12px}
+.col p{color:#4d3d38}
+.col .fl{margin-top:20px;font-size:.92rem;color:var(--brass-d);font-weight:600}
+
+/* menu */
+.menu{background:var(--wine);color:var(--ivory)}
+.menu .head p{color:rgba(244,238,227,.7)}
+.menu h2{color:var(--brass)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.tab{font:inherit;font-size:.92rem;padding:9px 18px;border:1px solid var(--line);background:transparent;color:var(--ivory);cursor:pointer;border-radius:2px}
+.tab:hover{border-color:var(--brass)}
+.tab[aria-selected="true"]{background:var(--brass);border-color:var(--brass);color:var(--wine);font-weight:600}
+.list{display:grid;grid-template-columns:1fr 1fr;column-gap:72px;max-width:1000px}
+.list .row{padding:14px 0}
+.list .n{font-size:1.02rem}
+.note{margin-top:28px;font-size:.85rem;color:rgba(244,238,227,.6);max-width:640px}
+
+/* sets */
+.sets .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px}
+.set{padding:34px 30px;border:1px solid #d9ccb6;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:#fbf7ef}
+.set.big{background:var(--wine);color:var(--ivory);border-color:var(--wine)}
+.set h3{font-size:1.8rem;margin-bottom:10px}
+.set.big h3{color:var(--brass);font-size:2.3rem}
+.set p{font-size:.95rem;color:#4d3d38}
+.set.big p{color:rgba(244,238,227,.75)}
+.set .pr{font-family:var(--serif);font-size:2rem;font-weight:700}
+.set.big .pr{color:var(--brass)}
+.set .pr small{font-family:var(--sans);font-size:.8rem;font-weight:400;opacity:.65;margin-left:6px}
+
+/* contacts */
+.contacts{background:#ebe2d1}
+.contacts .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:stretch}
+dl{margin:32px 0 0;display:grid;gap:22px}
+dt{font-size:.85rem;color:var(--mute);margin-bottom:2px}
+dd{margin:0;font-family:var(--serif);font-size:1.5rem;font-weight:600;line-height:1.25}
+dd a{text-decoration:none;border-bottom:1px solid var(--brass)}
+.map{min-height:380px;border:1px solid #cdbfa8;background:#d9ccb6}
+.map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+.contacts .cta .btn.ghost{color:var(--ink);border-color:rgba(36,20,24,.4)}
+.contacts .cta .btn.ghost:hover{color:var(--brass-d);border-color:var(--brass-d)}
+
+footer{background:var(--wine);color:rgba(244,238,227,.6);padding:34px 0;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer b{font-family:var(--serif);color:var(--brass);font-size:1.3rem}
+
+@media(max-width:900px){
+  nav{display:none}
+  .hero .wrap,.contacts .wrap,.sets .grid,.kitchen .cols{grid-template-columns:1fr}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0;padding-left:0}
+  .fact{border-top:1px solid #e3d8c6}
+  .fact:nth-child(-n+2){border-top:0}
+  .col{padding:28px 0;border-left:0;border-top:1px solid #d9ccb6}
+  .col:first-child{border-top:0;padding-top:0}
+  .list{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero h1{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Прайд</a>
+    <nav aria-label="Основная навигация">
+      <a href="#kitchen">Кухня</a>
+      <a href="#menu">Меню</a>
+      <a href="#sets">Для компании</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn" data-tel href="tel:+70000000000">Забронировать стол</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Прайд</h1>
+        <p class="lead">Стейки на гриле, блюда от шефа и большое меню на любой вкус.</p>
+        <p class="sub">Ресторан в центре Наро-Фоминска. Для ужина вдвоём, семейного обеда и больших встреч.</p>
+        <div class="cta">
+          <a class="btn" data-tel href="tel:+70000000000">Забронировать стол</a>
+          <a class="btn ghost" href="#menu">Смотреть меню</a>
+        </div>
+      </div>
+      <aside class="ledger" aria-label="Избранное из меню">
+        <h3>Из меню</h3>
+        <small>Любимые блюда гостей</small>
+        <div id="hero-list"></div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact"><b>1 419</b><span>отзывов гостей на Яндекс Картах</span></div>
+      <div class="fact"><b>13</b><span>разделов меню: от стейков до wok</span></div>
+      <div class="fact"><b>100 г</b><span>стейки подаём по вашему весу и прожарке</span></div>
+      <div class="fact"><b>Центр</b><span>Профсоюзная ул., 1, Наро-Фоминск</span></div>
+    </div>
+  </div>
+
+  <section class="kitchen" id="kitchen">
+    <div class="wrap">
+      <div class="head">
+        <h2>Три направления кухни</h2>
+        <p>Одно меню на всю компанию: каждый найдёт своё.</p>
+      </div>
+      <div class="cols">
+        <div class="col">
+          <h3>Гриль и мясо</h3>
+          <p>Стейки из говядины, ребра в соусе барбекю, бефстроганов, утиная ножка конфи и свиная рулька.</p>
+          <p class="fl">Фирменное: стейк «Прайд»</p>
+        </div>
+        <div class="col">
+          <h3>Паста и европейская кухня</h3>
+          <p>Паста с щёчками и морепродуктами, равиоли с шестью сырами, тёплые закуски и салаты с сёмгой и ростбифом.</p>
+          <p class="fl">Фирменное: спагетти Неро с тобико</p>
+        </div>
+        <div class="col">
+          <h3>Роллы и wok</h3>
+          <p>Фирменные роллы с лососем, угрём и тунцом, лапша в wok и том ям с морепродуктами.</p>
+          <p class="fl">Фирменное: ролл «Император»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="head">
+        <h2>Меню</h2>
+        <p>Избранные позиции по разделам. Полное меню подадут в ресторане.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Разделы меню" id="tabs"></div>
+      <div class="list" id="list" role="tabpanel" aria-live="polite"></div>
+      <p class="note">Цены указаны в рублях и могут меняться. Актуальную стоимость и наличие блюд уточняйте у администратора.</p>
+    </div>
+  </section>
+
+  <section class="sets" id="sets">
+    <div class="wrap">
+      <div class="head">
+        <h2>Для компании</h2>
+        <p>Сеты, которые удобно заказывать на стол сразу.</p>
+      </div>
+      <div class="grid">
+        <article class="set big">
+          <div>
+            <h3>Мясной сет</h3>
+            <p>Медальоны из свинины, свиная рулька, ребра, колбаски на гриле и куриные крылья. К ним картофель мини, капустный приварок и соусы блю-чиз и барбекю.</p>
+          </div>
+          <div class="pr">4 470 ₽</div>
+        </article>
+        <article class="set">
+          <div>
+            <h3>Ассорти к пиву</h3>
+            <p>Куриный попкорн, луковые кольца, чипсы, тёплый арахис, охотничьи колбаски, сырные шарики и соусы.</p>
+          </div>
+          <div class="pr">1 180 ₽<small>600 г</small></div>
+        </article>
+        <article class="set">
+          <div>
+            <h3>Сет к вину</h3>
+            <p>Сыры, фуэт, парма, ростбиф, вяленые томаты, оливки с гриссини, мёд и крем чиз.</p>
+          </div>
+          <div class="pr">1 370 ₽<small>420 г</small></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="wrap">
+      <div>
+        <h2>Приходите в «Прайд»</h2>
+        <dl>
+          <div><dt>Адрес</dt><dd>Наро-Фоминск,<br>Профсоюзная ул., 1</dd></div>
+          <div><dt>Телефон</dt><dd><a data-tel href="tel:+70000000000">+7 (000) 000-00-00</a></dd></div>
+          <div><dt>Часы работы</dt><dd data-hours>Ежедневно, 12:00–00:00</dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn" data-tel href="tel:+70000000000">Забронировать стол</a>
+          <a class="btn ghost" href="https://yandex.com/maps/org/prayd/239133831042/" target="_blank" rel="noopener">Отзывы и фото на Яндекс Картах</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe title="Карта: ресторан «Прайд», Профсоюзная ул., 1, Наро-Фоминск" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://yandex.ru/map-widget/v1/?ll=36.735005%2C55.379174&z=16&pt=36.735005,55.379174,pm2rdm"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Прайд</b>
+    <span>Наро-Фоминск, Профсоюзная ул., 1</span>
+    <span>© <span id="year">2026</span> Ресторан «Прайд»</span>
+  </div>
+</footer>
+
+<script>
+/* ====== НАСТРОЙКИ: замените на данные заведения ====== */
+var CONFIG = {
+  phoneText: "+7 (000) 000-00-00",
+  phoneHref: "+70000000000",
+  hours: "Ежедневно, 12:00–00:00"
+};
+/* ====================================================== */
+
+var HERO = [
+  ["Рибай", "980 ₽", "за 100 г"],
+  ["Ребра от шефа", "940 ₽", "450 г"],
+  ["Стейк форели", "1 370 ₽", "250 г"],
+  ["Спагетти Неро с тобико", "840 ₽", "370 г"],
+  ["Ролл «Император»", "780 ₽", "8 шт."],
+  ["Баскский чизкейк", "420 ₽", "150 г"]
+];
+
+var MENU = {
+  "Стейки": [
+    ["Рибай", "980 ₽", "за 100 г"],
+    ["Стриплойн", "738 ₽", "за 100 г"],
+    ["Филе миньон", "527 ₽", "за 100 г"],
+    ["Стейк «Прайд»", "537 ₽", "за 100 г"],
+    ["Стейк из курицы", "540 ₽", "200 г"]
+  ],
+  "Горячее": [
+    ["Ребра от шефа", "940 ₽", "450 г"],
+    ["Бефстроганов с грибами", "1 020 ₽", "390 г"],
+    ["Утиная ножка конфи", "880 ₽", "1 шт."],
+    ["Щека говяжья с перлотто", "1 160 ₽", "340 г"],
+    ["Бургер «Pride»", "780 ₽", "470 г"],
+    ["Свиная рулька", "1 490 ₽", "1 шт."]
+  ],
+  "Рыба": [
+    ["Стейк форели", "1 370 ₽", "250 г"],
+    ["Филе дорадо", "940 ₽", "1 шт."],
+    ["Панкейк Фиш из лосося", "830 ₽", "310 г"],
+    ["Котлеты из судака", "810 ₽", "380 г"]
+  ],
+  "Паста": [
+    ["Спагетти Неро с тобико", "840 ₽", "370 г"],
+    ["Паппарделле с щёчками", "770 ₽", "330 г"],
+    ["Фетучини с креветками", "840 ₽", "270 г"],
+    ["Равиоли 6 сыров", "670 ₽", "270 г"],
+    ["Фетучини Карбонара", "720 ₽", "320 г"]
+  ],
+  "Роллы": [
+    ["Император", "780 ₽", "8 шт."],
+    ["Токио", "820 ₽", "8 шт."],
+    ["Филадельфия", "780 ₽", "8 шт."],
+    ["Самурай", "790 ₽", "8 шт."],
+    ["Дракон", "770 ₽", "8 шт."],
+    ["Вулкан", "590 ₽", "8 шт."]
+  ],
+  "Закуски": [
+    ["Мидии средиземноморские", "1 080 ₽", "230 г"],
+    ["Креветки в сливочно-чесночном соусе", "820 ₽", "300 г"],
+    ["Жареный камамбер", "680 ₽", "180 г"],
+    ["Сёмга шеф-посола", "1 080 ₽", "150 г"],
+    ["Ассорти сыров", "980 ₽", "260 г"],
+    ["Тигровые креветки в темпуре", "640 ₽", "5 шт."]
+  ],
+  "Салаты": [
+    ["С сёмгой и авокадо", "940 ₽", "200 г"],
+    ["Тёплый, с говядиной", "860 ₽", "260 г"],
+    ["Ростбиф с микс салатом", "760 ₽", "170 г"],
+    ["Оливье с копчёной сёмгой", "780 ₽", "210 г"],
+    ["Цезарь с креветками", "760 ₽", "240 г"]
+  ],
+  "Десерты": [
+    ["Баскский чизкейк", "420 ₽", "150 г"],
+    ["Кекс-флан с горячим шоколадом", "580 ₽", "170 г"],
+    ["Тирамису", "480 ₽", "110 г"],
+    ["Яблочный штрудель", "480 ₽", "180 г"],
+    ["Наполеон", "470 ₽", "180 г"]
+  ]
+};
+
+function rows(items) {
+  return items.map(function (i) {
+    return '<div class="row"><span class="n">' + i[0] + '</span><span class="d"></span>' +
+           '<span class="p">' + i[1] + '<span class="w">' + i[2] + '</span></span></div>';
+  }).join("");
+}
+
+document.getElementById("hero-list").innerHTML = rows(HERO);
+
+var tabs = document.getElementById("tabs");
+var list = document.getElementById("list");
+var keys = Object.keys(MENU);
+
+function show(key) {
+  list.innerHTML = rows(MENU[key]);
+  Array.prototype.forEach.call(tabs.children, function (b) {
+    b.setAttribute("aria-selected", b.textContent === key ? "true" : "false");
+  });
+}
+
+keys.forEach(function (k) {
+  var b = document.createElement("button");
+  b.type = "button";
+  b.className = "tab";
+  b.setAttribute("role", "tab");
+  b.textContent = k;
+  b.addEventListener("click", function () { show(k); });
+  tabs.appendChild(b);
+});
+show(keys[0]);
+
+Array.prototype.forEach.call(document.querySelectorAll("[data-tel]"), function (a) {
+  a.setAttribute("href", "tel:" + CONFIG.phoneHref);
+  if (a.tagName === "A" && a.parentNode.tagName === "DD") { a.textContent = CONFIG.phoneText; }
+});
+var h = document.querySelector("[data-hours]");
+if (h) { h.textContent = CONFIG.hours; }
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
